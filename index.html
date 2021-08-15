@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+    </head>
+<style>
+body {
+    margin:0;
+    padding:0;
+}
+div{
+    position:fixed;
+    width:100%;
+    top:20vh;
+    text-align:center;
+    font-size:30px;
+    text-transform:capitalize ;
+}
+img{
+    position:fixed;
+    width:50%;
+    top:30vh;
+    left:25%;
+}
+ </style>
+
+    <body>
+        <div>touch the ant 😊</div>
+        <img id="im" src="https://i.giphy.com/media/cjoWs5ojCcKh01DJCC/giphy.webp"/>
+    </body>
+<script> 
+var ready = 0
+window.onload = function(){
+    alert("⚠️This dosen't promote any type of animal harm\nSave nature save yourself\n\nMade just for fun !\nKeep your volume full :)")
+    aud1 = new Audio();
+    aud1.src = "https://www.dropbox.com/s/s7dzkufi7p9d3gi/kaisi%20hai%20ye%20anhoni%20%28mp3cut.net%29.mp3?dl=1";
+        document.getElementById("im").addEventListener("click",function(){
+        this.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpOvWOVyp6fHKhh7tjGKVDpviZmu3vat-e2g&usqp=CAU";
+        document.getElementsByTagName("div")[0].innerHTML = "oops! you killed her 🥺.";
+        aud1.play();
+        if(ready == 0){
+            try{
+                navigator.vibrate(1000);
+            }
+            catch(err){
+                console.log(err)
+            }
+            ready = 1;
+            setTimeout(function(){
+                alert("Never do this again in real life !")
+            },3000)
+        }
+    });
+}
+ </script>
+
+
+
+
+</html>
